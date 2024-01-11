@@ -2,13 +2,17 @@ extends CanvasLayer
 class_name TimeManager
 
 @onready var timer: Timer = $Timer
-@onready var label: Label = $Label
+@onready var label: Label = $MarginContainer/HBoxContainer/Label
+@onready var startButton: Button = $MarginContainer/HBoxContainer/Start
+@onready var stopButton: Button = $MarginContainer/HBoxContainer/Stop
 
 signal timer_start()
 signal timer_stop()
 
 func _ready():
 	timer.timeout.connect(stop)
+	startButton.button_down.connect(func (): startTimerWithMinutes(30))
+	stopButton.button_down.connect(stop)
 
 func _process(_delta):
 	var time_elapsed = 	timer.time_left
