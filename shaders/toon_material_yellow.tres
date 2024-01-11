@@ -1,9 +1,11 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cuyfivm24b37e"]
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cuyfivm24b37e"]
 
+[ext_resource type="Material" uid="uid://c1iocmyuom2lu" path="res://shaders/outline_shader_pass.tres" id="1_0ndy0"]
 [ext_resource type="Shader" path="res://shaders/toon.gdshader" id="1_kbnyd"]
 
 [resource]
 render_priority = 0
+next_pass = ExtResource("1_0ndy0")
 shader = ExtResource("1_kbnyd")
 shader_parameter/albedo = Color(0.835294, 0.54902, 0.341176, 1)
 shader_parameter/clamp_diffuse_to_max = false

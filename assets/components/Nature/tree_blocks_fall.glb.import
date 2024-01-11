@@ -33,7 +33,11 @@ _subresources={
 "materials": {
 "leafsFall": {
 "use_external/enabled": true,
-"use_external/path": "res://shaders/toon_material.tres"
+"use_external/path": "res://shaders/toon_material_yellow.tres"
+},
+"woodBirch": {
+"use_external/enabled": true,
+"use_external/path": "res://shaders/toon_material_brich.tres"
 }
 }
 }

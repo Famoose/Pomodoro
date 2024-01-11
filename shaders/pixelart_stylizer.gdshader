@@ -105,3 +105,5 @@ void fragment() {
 	float alpha_mask = depth_diff * float(shadows_enabled) + normal_diff * float(highlights_enabled);
 	ALPHA = clamp((alpha_mask) * 5., 0., 1.);
 }
+
+
